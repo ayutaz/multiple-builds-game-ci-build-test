@@ -47,6 +47,7 @@ jobs:
     - name: Build project
       uses: game-ci/unity-builder@v2.0-alpha-13
       with:
+        buildsPath: Builds/${{ matrix.targetPlatform }}
         unityVersion: ${{ matrix.unityVersion }}
         targetPlatform: ${{ matrix.targetPlatform }}
      
@@ -58,7 +59,7 @@ jobs:
 
         # デプロイ用ビルドフォルダパスを指定する
         # GameCI の Builder はデフォルトでは build フォルダにビルド内容を出力する
-        folder: build
+        folder: Builds/WebGL
 
     # Output
     - uses: actions/upload-artifact@v2
