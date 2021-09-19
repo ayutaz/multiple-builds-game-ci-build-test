@@ -29,6 +29,7 @@ jobs:
           - 2020.3.18f1
         targetPlatform:
          - WebGL
+         - StandaloneWindows64
     needs: remove-old-artifacts
     steps:
     - name: Checkout
